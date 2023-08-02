@@ -5,7 +5,6 @@ USER root
 RUN apt -y update 
 WORKDIR /usr/local/apache2/htdocs/
 
-RUN rm -rf *
 ADD ./alpha/* /usr/local/apache2/htdocs/
 
 ENTRYPOINT ["httpd-foreground"]
